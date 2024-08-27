@@ -1,0 +1,83 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+.row{
+
+    @apply flex flex-wrap  py-8 items-center
+    
+    
+    
+    }
+    .btn{
+        @apply px-4 pt-2 rounded-lg text-white bg-green-600  w-full
+    }
+    
+    .product .btn{
+    
+    transition: transform 1s, opacity 1s;
+    
+    transform: translateY(100%);
+    opacity: 0;
+    
+    }
+    
+    .product:hover .btn{
+        opacity: 1;
+        transform: translate(0%);
+    }
+    .font-sm{
+        font-size: 14px;
+    }
+    .catogory-img{
+
+
+height: 300px;
+
+
+    }
+    .catogeries{
+        transition: all 0.5s;
+    }
+    .catogeries:hover {
+
+  
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; ;
+        cursor: pointer;
+        border-radius: 20px;
+        border: 1 solid blue;
+    
+
+    
+    }
+    .bord{
+        border: 1px solid green;
+    }
+
+    .catogeriesslider:hover{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; ;
+        border-radius: 20px;
+        border: 3 solid rgb(43, 255, 0);
+    }
+    .catogeriesslider{
+        transition: all 0.5s;
+    }
+
+
+    input{
+
+        height: 40px;
+        width: 50%;
+        margin: auto;
+    }
+  
+    input[type="search"] {
+        outline: none; /* Remove the default outline on focus */
+      }
+      
