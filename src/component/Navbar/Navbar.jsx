@@ -3,11 +3,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import { UserContext } from '../../UserContext/UserContext';
 import logo from "../../assets/logo.svg";
 import { CartContext } from '../../Context/Cartcountext';
-import { Wishlistt } from '../../ContextWishlist/WishlistCon';
+// import { Wishlistt } from '../../ContextWishlist/WishlistCon';
 
 export default function Navbar() {
   const { Userlogin, setUserLogin } = useContext(UserContext);
-  const { cart } = useContext(Wishlistt);
+  // const { cart } = useContext(Wishlistt);
   const { cartt } = useContext(CartContext);
   const navigate = useNavigate();
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -146,10 +146,10 @@ export default function Navbar() {
               <div className="absolute -top-2 -right-3 text-white z-10 rounded-xl bg-green-500 px-2 text-xs">{cartt}</div>
               <i className="text-2xl fa-solid fa-cart-shopping"></i>
             </li>
-            <li className="relative flex items-center">
+            {/* <li className="relative flex items-center">
               <div className="absolute -top-2 -right-3 text-white z-10 rounded-xl bg-green-500 px-2 text-xs">{cart}</div>
               <i className="text-2xl fa-solid fa-heart text-red-600"></i>
-            </li>
+            </li> */}
             <li className="flex space-x-2 ">
               <a href="#" className="text-gray-900 hover:text-green-700">
                 <i className="fa-brands fa-facebook mx-1 text-xl"></i>

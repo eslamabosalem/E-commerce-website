@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 // دى component
 import { Navigate } from 'react-router-dom';
-useState
 
 export default function ProtectedRoute(props) {
 

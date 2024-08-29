@@ -3,7 +3,7 @@ import React, { createContext, useEffect, useState } from 'react'
 
 export let Wishlistt = createContext()
 export default function WishListProvider(props) {
-   const [cart, setCart] = useState(null)
+//    const [cart, setCart] = useState(null)
    const [wlIds, setWlIds] = useState([])
 const [wishList, setWishList] = useState([])
 
@@ -22,7 +22,7 @@ function getWishlist(){
     
     console.log('get',response);
     
-    setCart(response?.data?.count)
+    // setCart(response?.data?.count)
     setWishList(response?.data?.data)
     setWlIds(response?.data?.data?.map((wl)=>wl._id))
     setWishList(response?.data?.data)
@@ -49,7 +49,7 @@ headers
 }) 
 .then(async(response)=>{
     if(response.data.message == 'success'){
-        setCart(response?.data?.count)
+        // setCart(response?.data?.count)
         setWlIds(response?.data?.data)
         setWishList(response?.data?.data)
         await getWishlist();
@@ -77,7 +77,7 @@ function deletWhishlist(productId){
     })
     .then(async(response)=>{
         if(response.data.message == 'success'){
-            setCart(response?.data?.count)
+            // setCart(response?.data?.count)
             setWlIds(response?.data?.data)
             setWishList(response?.data?.data)
 
@@ -93,9 +93,7 @@ function deletWhishlist(productId){
     )
     }    
 
-   useEffect(()=>{
-    getWishlist()
-   },[])
+ 
 
 
   return (
@@ -103,7 +101,7 @@ function deletWhishlist(productId){
  
  
 <Wishlistt.Provider value={{getWishlist,AddproductWhish,deletWhishlist , wlIds,
-setWlIds, setWishList,wishList,cart, setCart}}>
+setWlIds, setWishList,wishList}}>
 {props.children}
 </Wishlistt.Provider>
  

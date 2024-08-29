@@ -23,6 +23,15 @@ export default function Recentproducts() {
     }
   }, [setCartt]);
 
+  // تحقق مما إذا كان يجب تحديث الصفحة
+  useEffect(() => {
+    const hasRefreshed = localStorage.getItem('hasRefreshed');
+    if (!hasRefreshed) {
+      localStorage.setItem('hasRefreshed', 'true');
+      window.location.reload();
+    }
+  }, []);
+
   async function addProduct(productId) {
     setcurrentProductId(productId);
     setLoading(true);
@@ -162,3 +171,4 @@ export default function Recentproducts() {
     );
   }
 }
+
