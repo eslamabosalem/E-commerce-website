@@ -1,5 +1,6 @@
 import React from 'react'
-import errorr from "../../assets/error.webp"
+import errorr from "../../assets/errorr.webp"
+
 export default function NotFound() {
 
 

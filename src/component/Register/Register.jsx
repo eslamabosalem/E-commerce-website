@@ -157,8 +157,7 @@ onSubmit:handleRegisteer
 
 
 <form className="max-w-lg py-9 mx-auto" onSubmit={formik.handleSubmit}>
-<h2 className='text-3xl font-bold mb-6 text-green-600'>Regist now</h2>
-
+<h2 className='text-3xl font-bold mb-6 text-green-600'>Register Now</h2>
   <div className="relative z-0 w-full mb-5 group">
     <input onChange={formik.handleChange}    onBlur={formik.handleBlur}  value={formik.values.name} type="name" name="name" id="name" className="block py-2.5 px-0 w-full text-sm text-green-900 bg-transparent border-0 border-b-2 border-green-300 appearance-none dark:text-black dark:border-green-600 dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-600 peer" placeholder=" "  />
     <label htmlFor="name" className="peer-focus:font-medium absolute text-sm text-green-500 dark:text-green-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-green-600 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Enter your name</label>
